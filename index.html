@@ -4,294 +4,300 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aida Topalli</title>
+<meta name="description" content="Aida Topalli, telecommunication engineer and developer in Tirana. Python, Django, REST APIs, digital banking.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&display=swap" rel="stylesheet">
 <style>
-/* VOICE everyday-professional personal site, confident and clear
-   IDEA a transit network map: a telecom engineer's career drawn as one line with stations
-   PICTURE large metro line from Polytechnic to "Next stop: software engineer", stations clickable
-   COLOUR white ground, black ink, line red #e6261f, blue #0a5cff, amber #ffb400, green #00a05a; night #0e1116
-   TYPE Figtree 800 + Figtree
-   LAYOUT laptop: nav, name across top, map full width beneath; phone: name, vertical line, sections stacked */
-:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0e1116);--ink:light-dark(#111418,#eef1f5);--mute:light-dark(#5a626e,#9aa4b2);--line:light-dark(#e3e6ea,#262c36);--panel:light-dark(#f4f6f8,#161b23);--red:#e6261f;--blue:light-dark(#0a5cff,#4d8bff);--amber:#ffb400;--green:#00a05a}
+/* VOICE professional, calm, confident; a personal site that reads like a well-set CV
+   IDEA a Swiss timetable: strict left edge, years hanging in a wide left column, thick rules
+   PICTURE the career drawn at true time scale, 2018 to today, every role a bar
+   COLOUR white, black, signal red #e4002b, one grey; night #0e0e0e
+   TYPE Archivo wide 800 for display + Archivo for text
+   LAYOUT laptop: name across the top, intro + figures beneath, timeline full width; phone: stacked, labels above bars */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0e0e0e);--ink:light-dark(#0f0f0f,#f2f2f0);--mute:light-dark(#5f5f5f,#a3a3a0);--rule:light-dark(#e4e4e1,#2a2a2a);--panel:light-dark(#f4f4f2,#171717);--red:#e4002b;--redink:light-dark(#c4001f,#ff4d63)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
-html{scroll-padding-top:72px;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Figtree,system-ui,sans-serif;overflow-x:clip}
+html{scroll-padding-top:80px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Archivo,system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
-.wrap{max-width:1240px;margin:0 auto}
-nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(5vw,16px);flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;font-size:17px}
-.logo i{width:26px;height:26px;border-radius:50%;border:6px solid var(--red);background:var(--bg)}
-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-nav ul a{display:block;padding:8px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
-nav ul a:hover,nav ul a:focus-visible{background:var(--panel)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-.hero{padding-bottom:12px}
-.hero h1{font-size:clamp(40px,7vw,76px);line-height:1.02;letter-spacing:-.03em;margin:0 0 14px;font-weight:800;text-wrap:balance}
-.lead{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px 48px;align-items:end}
-.lead p{font-size:clamp(18px,2vw,21px);margin:0;max-width:34em;color:var(--ink)}
-.cta{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--ink)}
-.btn.solid{background:var(--ink);color:var(--bg)}
+.band{padding:clamp(40px,6vw,96px) max(5vw,16px)}
+.wrap{max-width:1200px;margin:0 auto}
+h1,h2,h3{font-stretch:112%;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.05;margin:0;font-weight:800}
+.sec{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:24px 48px;border-top:6px solid var(--ink);padding-top:22px}
+.sec>header p{color:var(--mute);margin:12px 0 0;font-size:16px;max-width:22ch}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;padding:12px max(5vw,16px);flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-stretch:112%;font-size:18px}
+.mark i{width:14px;height:14px;background:var(--red)}
+nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0;flex-wrap:wrap;align-items:center}
+nav ul a{display:block;padding:9px 12px;text-decoration:none;font-weight:600;font-size:15px;border-radius:6px}
+nav ul a:hover{background:var(--panel)}
+nav ul a.cv{background:var(--ink);color:var(--bg);margin-left:6px}
+a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.hero{padding-top:clamp(40px,7vw,104px)}
+.hero h1{font-size:clamp(52px,10.5vw,148px);line-height:.92;font-weight:850;letter-spacing:-.04em;margin:0;font-stretch:118%}
+.hero h1 span{display:block}
+.role{display:flex;flex-wrap:wrap;gap:8px 22px;margin:26px 0 0;padding:16px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);font-weight:600;font-size:17px}
+.role b{color:var(--redink)}
+.intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:32px 64px;margin-top:36px;align-items:start}
+.intro p{font-size:clamp(19px,1.9vw,23px);line-height:1.45;margin:0;max-width:32em}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 22px;font-weight:700;text-decoration:none;border:2px solid var(--ink);border-radius:6px;font-size:16px}
+.btn.solid{background:var(--red);border-color:var(--red);color:#fff}
 .btn:hover{transform:translateY(-1px)}
-.mapbox{position:relative;height:clamp(300px,34vw,400px);margin-top:28px}
-.mapbox svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-svg text{paint-order:stroke;stroke:var(--bg);stroke-width:5px;font-family:Figtree,sans-serif;fill:var(--ink)}
-.stn{cursor:pointer}
-.stn:focus{outline:none}
-.stn:focus-visible circle.o{stroke:var(--blue)}
-.card{margin-top:8px;background:var(--panel);border-radius:16px;padding:18px 22px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;align-items:start;min-height:96px}
-.card b{font-size:19px}
-.card .dot{width:22px;height:22px;border-radius:50%;border:6px solid var(--c,var(--red));margin-top:4px;grid-row:span 2}
-.card span{color:var(--mute)}
-h2{font-size:clamp(30px,4vw,44px);line-height:1.05;letter-spacing:-.02em;margin:0 0 24px;font-weight:800;text-wrap:balance}
-.line-h{display:flex;align-items:center;gap:14px}
-.line-h::before{content:"";width:34px;height:10px;border-radius:5px;background:var(--c)}
-.about{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px 56px}
-.about p{margin:0 0 14px;max-width:62ch}
-.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-content:start}
-.fact{background:var(--panel);border-radius:14px;padding:16px 18px}
-.fact b{display:block;font-size:26px;font-weight:800;line-height:1.1}
-.fact span{color:var(--mute);font-size:15px}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:16px}
-.sk{border-top:8px solid var(--c);padding-top:14px}
-.sk h3{margin:0 0 10px;font-size:20px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.chips li{padding:6px 12px;border-radius:999px;background:var(--panel);font-weight:600;font-size:15px;white-space:nowrap}
-.jobs{list-style:none;margin:0;padding:0;position:relative}
-.jobs::before{content:"";position:absolute;left:13px;top:8px;bottom:8px;width:10px;border-radius:5px;background:linear-gradient(var(--green),var(--blue) 30%,var(--amber) 65%,var(--red))}
-.job{position:relative;padding:0 0 30px 58px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:6px 40px}
-.job::before{content:"";position:absolute;left:4px;top:4px;width:28px;height:28px;border-radius:50%;background:var(--bg);border:6px solid var(--ink)}
-.job h3{margin:0;font-size:21px;line-height:1.25}
-.job .org{color:var(--mute);font-weight:600}
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink)}
+.fig{padding:18px 0;border-bottom:1px solid var(--rule)}
+.fig:nth-child(odd){padding-right:16px;border-right:1px solid var(--rule)}
+.fig:nth-child(even){padding-left:20px}
+.fig b{display:block;font-size:clamp(34px,4vw,48px);line-height:1;font-weight:850;font-stretch:118%;letter-spacing:-.03em}
+.fig span{display:block;margin-top:8px;color:var(--mute);font-size:15px;line-height:1.35}
+.tl{margin-top:clamp(44px,6vw,80px)}
+.tl h3{font-size:20px;margin:0 0 4px}
+.tl .sub{color:var(--mute);margin:0 0 18px;font-size:15px}
+.axis,.row{display:grid;grid-template-columns:15em minmax(0,1fr);gap:16px;align-items:center}
+.axis{border-bottom:1px solid var(--ink);padding-bottom:6px}
+.ticks{position:relative;height:22px}
+.ticks span{position:absolute;transform:translateX(-50%);font-size:13px;font-weight:700;color:var(--mute);font-variant-numeric:tabular-nums}
+.rows{position:relative}
+.grid{position:absolute;top:0;bottom:0;right:0;left:calc(15em + 16px);pointer-events:none}
+.grid i{position:absolute;top:0;bottom:0;border-left:1px solid var(--rule)}
+.grid .now{border-left:2px solid var(--red)}
+.row{padding:7px 0;border-bottom:1px solid var(--rule);position:relative}
+.row .lab{font-weight:700;font-size:15px;line-height:1.25}
+.row .lab small{display:block;font-weight:500;color:var(--mute);font-size:13.5px}
+.track{position:relative;height:24px}
+.bar{position:absolute;top:3px;height:18px;border-radius:3px;background:var(--ink)}
+.bar.edu{background:transparent;border:2px solid var(--ink)}
+.bar.course{background:repeating-linear-gradient(-45deg,var(--ink) 0 3px,transparent 3px 7px);border:1px solid var(--ink)}
+.bar.cur{background:var(--red)}
+.key{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-size:14px;color:var(--mute)}
+.key span{display:inline-flex;align-items:center;gap:8px}
+.key i{width:22px;height:12px;border-radius:2px;background:var(--ink);display:inline-block}
+.key i.edu{background:transparent;border:2px solid var(--ink)}
+.key i.cur{background:var(--red)}
+.key i.course{background:repeating-linear-gradient(-45deg,var(--ink) 0 3px,transparent 3px 7px);border:1px solid var(--ink)}
+.key i.now{width:2px;height:16px;background:var(--red)}
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.case{padding:22px 22px 26px 0;border-right:1px solid var(--rule)}
+.case+.case{padding-left:22px}
+.case:last-child{border-right:0}
+.case .n{font-size:13.5px;font-weight:700;color:var(--redink)}
+.case h3{font-size:22px;line-height:1.15;margin:8px 0 10px}
+.case p{margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.tags li{font-size:13.5px;font-weight:600;padding:4px 10px;border:1px solid var(--rule);border-radius:4px;white-space:nowrap}
+.proj{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.p{border:1px solid var(--rule);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;background:var(--bg)}
+.p svg{display:block;width:100%;height:auto;background:var(--panel);border-bottom:1px solid var(--rule)}
+.p>div{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.p h3{margin:0;font-size:21px}
+.p p{margin:0;color:var(--mute)}
+.links{display:flex;flex-wrap:wrap;gap:18px;margin-top:auto;padding-top:8px}
+.links a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--red);padding:6px 0 2px}
+.jobs{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.job{display:grid;grid-template-columns:11em minmax(0,1fr) minmax(0,1.35fr);gap:8px 32px;padding:24px 0;border-bottom:1px solid var(--rule)}
+.when{font-weight:800;font-stretch:112%;font-size:17px;font-variant-numeric:tabular-nums;line-height:1.3}
+.when small{display:block;font-weight:500;color:var(--mute);font-size:14px;font-stretch:100%}
+.job h3{margin:0;font-size:21px;line-height:1.2}
+.job .org{color:var(--mute);font-weight:600;margin-top:4px}
 .job ul{margin:0;padding-left:18px}
-.job li{margin-bottom:4px}
-.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.w{background:var(--panel);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
-.w svg{width:100%;height:110px}
-.w h3{margin:0;font-size:20px}
-.w p{margin:0;color:var(--ink)}
-.more{margin:22px 0 0;font-size:17px}.more a{font-weight:700}
-.proj{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.p{display:flex;flex-direction:column;gap:10px}
-.p svg{width:100%;height:auto;display:block}
-.p h3{margin:6px 0 0;font-size:21px}
-.p p{margin:0}
-.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
-.links a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--ink);font-weight:700;text-decoration:none;font-size:15px}
-.links a:first-child{background:var(--ink);color:var(--bg)}
-.w .tags{margin-top:auto;color:var(--mute);font-size:15px;font-weight:600}
-.edu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 18px}
-.edu div{border-left:8px solid var(--c);padding:4px 0 4px 18px}
-.edu b{display:block;font-size:19px}
-.edu span{color:var(--mute)}
-.contact{background:var(--ink);color:var(--bg)}
-.contact h2{color:var(--bg)}
-.contact .row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px 48px;align-items:center}
-.contact p{margin:0;font-size:19px;max-width:40ch}
-.contact .cta{justify-content:flex-start}
-.reach{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:28px;font-size:17px;font-weight:600;opacity:.85}
-.contact .btn{border-color:var(--bg)}
-.contact .btn.solid{background:var(--bg);color:var(--ink)}
-footer{padding:20px max(5vw,16px);color:var(--mute);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media(max-width:900px){.work,.proj{grid-template-columns:minmax(0,1fr)}.edu{grid-template-columns:repeat(2,minmax(0,1fr))}.job{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:720px){.lead,.about,.contact .row{grid-template-columns:minmax(0,1fr)}.cta{justify-content:flex-start}}
-@media(max-width:600px){.edu{grid-template-columns:minmax(0,1fr)}.mapbox{height:600px}nav ul a{padding:8px 9px;font-size:14px}.facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.train{display:none}}
+.job li{margin-bottom:5px}
+.job li::marker{color:var(--red)}
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;border-top:1px solid var(--ink)}
+.sk{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.sk b{font-size:15px}
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;border-top:1px solid var(--ink)}
+.ed{padding:16px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px}
+.ed b{font-size:17px}
+.ed em{font-style:normal;font-weight:700;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums}
+.ed span{color:var(--mute);grid-column:1/-1}
+.contact{background:var(--red);color:#fff}
+.contact h2{font-size:clamp(40px,7vw,92px);line-height:.95;letter-spacing:-.035em;font-stretch:118%;font-weight:850}
+.contact .grid2{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px 64px;align-items:end;margin-top:28px}
+.contact p{font-size:20px;margin:0;max-width:34ch}
+.clist{list-style:none;margin:0;padding:0;border-top:2px solid #fff}
+.clist li{border-bottom:1px solid rgba(255,255,255,.45)}
+.clist a,.clist span{display:flex;justify-content:space-between;gap:4px 12px;padding:14px 0;text-decoration:none;font-weight:700;font-size:17px;flex-wrap:wrap}
+.clist em{font-style:normal;font-weight:500;opacity:.9}
+.clist a:hover em{text-decoration:underline}
+.clist a:focus-visible{outline-color:#fff}
+footer{padding:22px max(5vw,16px);color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:960px){.cases,.proj{grid-template-columns:minmax(0,1fr)}.case,.case+.case{padding:22px 0;border-right:0;border-bottom:1px solid var(--rule)}.job{grid-template-columns:9em minmax(0,1fr)}.job ul{grid-column:2}}
+@media(max-width:760px){.sec,.intro,.contact .grid2,.skills,.edu{grid-template-columns:minmax(0,1fr)}.sec>header p{max-width:none}.axis,.row{grid-template-columns:minmax(0,1fr);gap:4px}.axis .sp{display:none}.grid{left:0}.row{padding:10px 0}}
+@media(max-width:600px){.job{grid-template-columns:minmax(0,1fr)}.job ul{grid-column:auto}.sk{grid-template-columns:minmax(0,1fr);gap:2px}nav ul a{padding:8px;font-size:14px}.fig:nth-child(odd){padding-right:12px}.fig:nth-child(even){padding-left:14px}.ticks span:nth-child(even){display:none}}
+@media(prefers-reduced-motion:no-preference){.bar{transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
-  <a class="logo" href="#top"><i></i>Aida Topalli</a>
+  <a class="mark" href="#top"><i></i>Aida Topalli</a>
   <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a class="cv" href="AidaTOPALLI.pdf">CV</a></li>
   </ul>
 </div></nav>
 
 <header class="band hero" id="top"><div class="wrap">
-  <h1>Aida Topalli</h1>
-  <div class="lead">
-    <p>Telecommunication engineer with a background in digital banking and full-stack development. I build with Python, Django and JavaScript, test REST and SOAP APIs, and spent two and a half years on the systems behind digital banking at First Investment Bank.</p>
-    <div class="cta">
-      <a class="btn solid" href="#contact">Get in touch</a>
-      <a class="btn" href="AidaTOPALLI.pdf">Download CV</a>
+  <h1><span>Aida</span><span>Topalli</span></h1>
+  <div class="role"><span><b>Software engineer</b></span><span>Python · Django · REST APIs</span><span>Tirana, Albania</span></div>
+  <div class="intro">
+    <div>
+      <p>Telecommunication engineer who builds and tests software. I spent two and a half years on the systems behind digital banking at First Investment Bank, and I've been building Django and JavaScript apps since 2021.</p>
+      <div class="btns">
+        <a class="btn solid" href="#contact">Get in touch</a>
+        <a class="btn" href="AidaTOPALLI.pdf">Download CV</a>
+      </div>
+    </div>
+    <div class="figs">
+      <div class="fig"><b>2021</b><span>Building web apps with Django and JavaScript</span></div>
+      <div class="fig"><b>2.5 yrs</b><span>Digital banking, First Investment Bank</span></div>
+      <div class="fig"><b>MSc</b><span>Telecommunication Engineering</span></div>
+      <div class="fig"><b>C1</b><span>English, plus Albanian and Italian</span></div>
     </div>
   </div>
-  <div class="mapbox" id="map" aria-label="Career route map"><svg id="mapsvg" role="img" aria-label="Career route from the Polytechnic University of Tirana to software engineering"></svg></div>
-  <div class="card" id="card" aria-live="polite"></div>
+
+  <div class="tl" aria-label="Career timeline">
+    <h3>Career, 2018 to today</h3>
+    <p class="sub">Every role and degree at true time scale.</p>
+    <div class="axis"><span class="sp"></span><div class="ticks" id="ticks"></div></div>
+    <div class="rows" id="rows"><div class="grid" id="grid"></div></div>
+    <div class="key"><span><i></i>Work</span><span><i class="cur"></i>Current role</span><span><i class="edu"></i>Degree</span><span><i class="course"></i>Training</span><span><i class="now"></i>Today</span></div>
+  </div>
 </div></header>
 
-<section class="band" id="about"><div class="wrap about">
-  <div>
-    <h2 class="line-h" style="--c:var(--red)">About me</h2>
-    <p>I'm based in Tirana, with a BSc and an MSc in Telecommunication Engineering from the Polytechnic University of Tirana. Networks and signals taught me to think in systems: how data moves, where it breaks, and how to prove it works.</p>
-    <p>At First Investment Bank's Digitalization Unit I worked where banking meets code: API testing and integration validation, OAuth2 and SCA authentication flows, SEPA transfers, fiscalized invoices in mobile banking, an Oracle migration, and reporting for the Bank of Albania. Before that I built full-stack web apps as a freelancer and supported telecom customers at Digicom.</p>
-    <p>Today I'm a technical recruiter at IMPAX, screening software and AI engineers for US startups in San Francisco and New York. Reading engineering profiles every day keeps me close to how modern teams build. My next step is a software engineering role in Albania.</p>
-  </div>
-  <div class="facts">
-    <div class="fact"><b>MSc</b><span>Telecommunication Engineering, 2023</span></div>
-    <div class="fact"><b>2.5 yrs</b><span>Digital banking, First Investment Bank</span></div>
-    <div class="fact"><b>5+ yrs</b><span>Building and testing software since 2021</span></div>
-    <div class="fact"><b>3 languages</b><span>Albanian, English C1/B2, Italian B1</span></div>
+<section class="band" id="work" style="padding-top:0"><div class="wrap sec">
+  <header><h2>Selected work</h2><p>What I've built and tested in production systems.</p></header>
+  <div class="cases">
+    <article class="case">
+      <div class="n">First Investment Bank</div>
+      <h3>Digital banking APIs</h3>
+      <p>Tested and validated REST and SOAP integrations and microservices, OAuth2 and SCA authentication flows, and secure transactions. Supported deployment and monitoring of digital banking services.</p>
+      <ul class="tags"><li>Postman</li><li>REST / SOAP</li><li>OAuth2 · SCA</li><li>JSON / XML</li></ul>
+    </article>
+    <article class="case">
+      <div class="n">First Investment Bank</div>
+      <h3>SEPA, e-invoicing and Oracle migration</h3>
+      <p>Supported SEPA transfers, payment workflows and fiscalized invoice integration in mobile banking, and validated data through the Oracle system migration. Prepared reports for the Bank of Albania.</p>
+      <ul class="tags"><li>SEPA</li><li>SQL</li><li>Data validation</li><li>Reporting</li></ul>
+    </article>
+    <article class="case">
+      <div class="n">Domo Analytics · Freelance</div>
+      <h3>Full-stack web applications</h3>
+      <p>Built web apps end to end: Django backends, REST APIs, database integrations and the data flow to responsive JavaScript front ends, all versioned in Git.</p>
+      <ul class="tags"><li>Python</li><li>Django</li><li>JavaScript</li><li>PostgreSQL</li></ul>
+    </article>
   </div>
 </div></section>
 
-<section class="band" id="skills" style="background:var(--panel)"><div class="wrap">
-  <h2 class="line-h" style="--c:var(--blue)">Skills</h2>
-  <div class="skills" id="skillgrid"></div>
+<section class="band" id="projects" style="padding-top:0"><div class="wrap sec">
+  <header><h2>Projects</h2><p>Code and live demos on GitHub.</p></header>
+  <div class="proj">
+    <article class="p">
+      <svg viewBox="0 0 320 180" aria-hidden="true"><rect x="84" y="26" width="152" height="132" rx="8" fill="var(--bg)" stroke="var(--rule)"/><g fill="none" stroke="var(--ink)" stroke-width="2.5"><rect x="102" y="48" width="14" height="14" rx="3"/><rect x="102" y="80" width="14" height="14" rx="3"/><rect x="102" y="112" width="14" height="14" rx="3"/></g><path d="M105 87l4 4 7-8" stroke="var(--red)" stroke-width="3" fill="none"/><rect x="126" y="51" width="90" height="8" rx="4" fill="var(--ink)"/><rect x="126" y="83" width="70" height="8" rx="4" fill="var(--mute)" opacity=".5"/><rect x="126" y="115" width="80" height="8" rx="4" fill="var(--ink)"/></svg>
+      <div><h3>To-do list</h3><p>A task manager: add tasks, tick them off and keep track of what's left.</p>
+      <div class="links"><a href="https://github.com/ida-eng/todo-list">GitHub</a></div></div>
+    </article>
+    <article class="p">
+      <svg viewBox="0 0 320 180" aria-hidden="true"><rect x="40" y="26" width="240" height="132" rx="8" fill="var(--bg)" stroke="var(--rule)"/><rect x="40" y="26" width="240" height="22" rx="8" fill="var(--ink)"/><g fill="var(--ink)"><rect x="62" y="110" width="20" height="30" rx="2"/><rect x="90" y="92" width="20" height="48" rx="2"/><rect x="118" y="74" width="20" height="66" rx="2"/></g><rect x="146" y="62" width="20" height="78" rx="2" fill="var(--red)"/><circle cx="228" cy="100" r="30" fill="none" stroke="var(--rule)" stroke-width="10"/><circle cx="228" cy="100" r="30" fill="none" stroke="var(--red)" stroke-width="10" stroke-dasharray="130 200" transform="rotate(-90 228 100)"/></svg>
+      <div><h3>Hab-Dash</h3><p>A dashboard web app, deployed live on GitHub Pages.</p>
+      <div class="links"><a href="https://ida-eng.github.io/Hab-Dash/">Live demo</a><a href="https://github.com/ida-eng/Hab-Dash">GitHub</a></div></div>
+    </article>
+    <article class="p">
+      <svg viewBox="0 0 320 180" aria-hidden="true"><rect x="44" y="30" width="70" height="104" rx="6" fill="var(--ink)"/><rect x="125" y="30" width="70" height="104" rx="6" fill="var(--red)"/><rect x="206" y="30" width="70" height="104" rx="6" fill="var(--ink)"/><path d="M152 70l20 12-20 12z" fill="#fff"/><g fill="var(--mute)" opacity=".6"><rect x="44" y="142" width="52" height="7" rx="3"/><rect x="125" y="142" width="52" height="7" rx="3"/><rect x="206" y="142" width="52" height="7" rx="3"/></g></svg>
+      <div><h3>Movie app</h3><p>A movie browsing app built in JavaScript.</p>
+      <div class="links"><a href="https://github.com/ida-eng/Movie">GitHub</a></div></div>
+    </article>
+  </div>
 </div></section>
 
-<section class="band" id="experience"><div class="wrap">
-  <h2 class="line-h" style="--c:var(--amber)">Experience</h2>
+<section class="band" id="experience" style="padding-top:0"><div class="wrap sec">
+  <header><h2>Experience</h2><p>Banking, telecom and software, most recent first.</p></header>
   <ol class="jobs" id="jobs"></ol>
 </div></section>
 
-<section class="band" id="work" style="background:var(--panel)"><div class="wrap">
-  <h2 class="line-h" style="--c:var(--green)">What I've worked on</h2>
-  <div class="work">
-    <article class="w">
-      <svg viewBox="0 0 300 110" aria-hidden="true"><rect x="10" y="14" width="280" height="86" rx="10" fill="var(--bg)"/><rect x="10" y="14" width="280" height="20" rx="10" fill="var(--blue)"/><circle cx="26" cy="24" r="4" fill="#fff"/><circle cx="40" cy="24" r="4" fill="#fff"/><rect x="26" y="46" width="90" height="42" rx="6" fill="var(--blue)" opacity=".18"/><rect x="128" y="48" width="140" height="8" rx="4" fill="var(--ink)" opacity=".7"/><rect x="128" y="64" width="110" height="8" rx="4" fill="var(--ink)" opacity=".35"/><rect x="128" y="80" width="70" height="8" rx="4" fill="var(--ink)" opacity=".35"/></svg>
-      <h3>Full-stack web applications</h3>
-      <p>Freelance and at Domo Analytics: Django backends, REST APIs, database integrations and responsive JavaScript front ends, versioned in Git.</p>
-      <div class="tags">Python · Django · JavaScript · PostgreSQL</div>
-    </article>
-    <article class="w">
-      <svg viewBox="0 0 300 110" aria-hidden="true"><rect x="10" y="14" width="130" height="86" rx="10" fill="var(--bg)"/><rect x="160" y="14" width="130" height="86" rx="10" fill="var(--bg)"/><text x="24" y="40" font-size="14" font-weight="800" style="stroke:none" fill="var(--amber)">POST</text><rect x="24" y="52" width="100" height="7" rx="3" fill="var(--ink)" opacity=".5"/><rect x="24" y="66" width="80" height="7" rx="3" fill="var(--ink)" opacity=".3"/><path d="M140 57h20" stroke="var(--ink)" stroke-width="3"/><text x="174" y="40" font-size="14" font-weight="800" style="stroke:none" fill="var(--green)">200 OK</text><rect x="174" y="52" width="100" height="7" rx="3" fill="var(--ink)" opacity=".5"/><rect x="174" y="66" width="60" height="7" rx="3" fill="var(--ink)" opacity=".3"/><circle cx="262" cy="84" r="8" fill="var(--green)"/><path d="M258 84l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></svg>
-      <h3>Digital banking APIs</h3>
-      <p>Tested and validated REST and SOAP integrations and microservices, OAuth2 and SCA login flows, SEPA transfers and fiscalized invoices in mobile banking.</p>
-      <div class="tags">Postman · JSON/XML · OAuth2 · SEPA</div>
-    </article>
-    <article class="w">
-      <svg viewBox="0 0 300 110" aria-hidden="true"><rect x="10" y="14" width="280" height="86" rx="10" fill="var(--bg)"/><g id="bars"><rect x="34" y="62" width="26" height="26" rx="3" fill="var(--red)"/><rect x="72" y="46" width="26" height="42" rx="3" fill="var(--red)" opacity=".8"/><rect x="110" y="34" width="26" height="54" rx="3" fill="var(--red)" opacity=".6"/></g><rect x="160" y="34" width="110" height="8" rx="4" fill="var(--ink)" opacity=".6"/><rect x="160" y="52" width="110" height="8" rx="4" fill="var(--ink)" opacity=".3"/><rect x="160" y="70" width="80" height="8" rx="4" fill="var(--ink)" opacity=".3"/></svg>
-      <h3>Reporting and Oracle migration</h3>
-      <p>Prepared reports on transfers and digital banking customers for internal use and the Bank of Albania, and validated data during the Oracle system migration.</p>
-      <div class="tags">SQL · Data validation · Banking</div>
-    </article>
-  </div>
+<section class="band" id="skills" style="padding-top:0"><div class="wrap sec">
+  <header><h2>Skills</h2><p>The tools I use day to day.</p></header>
+  <div class="skills" id="skills-list"></div>
 </div></section>
 
-<section class="band" id="projects"><div class="wrap">
-  <h2 class="line-h" style="--c:var(--blue)">Projects</h2>
-  <div class="proj">
-    <article class="p" style="--c:var(--red)">
-      <svg viewBox="0 0 300 120" aria-hidden="true"><rect x="0" y="0" width="300" height="120" rx="12" fill="var(--c)"/><rect x="70" y="16" width="160" height="96" rx="8" fill="#fff"/><g fill="none" stroke="#111418" stroke-width="3"><rect x="86" y="32" width="12" height="12" rx="2"/><rect x="86" y="56" width="12" height="12" rx="2"/><rect x="86" y="80" width="12" height="12" rx="2"/><path d="M88 62l4 4 7-9" stroke="var(--green)"/></g><rect x="108" y="35" width="100" height="7" rx="3" fill="#111418" opacity=".7"/><rect x="108" y="59" width="80" height="7" rx="3" fill="#111418" opacity=".3"/><rect x="108" y="83" width="90" height="7" rx="3" fill="#111418" opacity=".7"/></svg>
-      <h3>To-do list</h3>
-      <p>A task list app: add tasks, check them off, keep track of what's left.</p>
-      <div class="links"><a href="https://github.com/ida-eng/todo-list">Code on GitHub</a></div>
-    </article>
-    <article class="p" style="--c:var(--blue)">
-      <svg viewBox="0 0 300 120" aria-hidden="true"><rect x="0" y="0" width="300" height="120" rx="12" fill="var(--c)"/><rect x="40" y="16" width="220" height="96" rx="8" fill="#fff"/><g fill="var(--amber)"><rect x="56" y="74" width="18" height="24" rx="3"/><rect x="80" y="58" width="18" height="40" rx="3"/><rect x="104" y="44" width="18" height="54" rx="3"/></g><circle cx="190" cy="62" r="28" fill="none" stroke="#e3e6ea" stroke-width="10"/><circle cx="190" cy="62" r="28" fill="none" stroke="var(--green)" stroke-width="10" stroke-dasharray="120 200" transform="rotate(-90 190 62)"/></svg>
-      <h3>Hab-Dash</h3>
-      <p>A dashboard web app, deployed live on GitHub Pages.</p>
-      <div class="links"><a href="https://ida-eng.github.io/Hab-Dash/">Live demo</a><a href="https://github.com/ida-eng/Hab-Dash">Code on GitHub</a></div>
-    </article>
-    <article class="p" style="--c:var(--amber)">
-      <svg viewBox="0 0 300 120" aria-hidden="true"><rect x="0" y="0" width="300" height="120" rx="12" fill="var(--c)"/><g fill="#111418"><rect x="40" y="18" width="64" height="88" rx="6"/><rect x="118" y="18" width="64" height="88" rx="6"/><rect x="196" y="18" width="64" height="88" rx="6"/></g><path d="M64 50l20 12-20 12z" fill="#fff"/><g fill="#fff" opacity=".5"><rect x="128" y="88" width="44" height="6" rx="3"/><rect x="206" y="88" width="44" height="6" rx="3"/></g></svg>
-      <h3>Movie app</h3>
-      <p>A movie browsing app built in JavaScript.</p>
-      <div class="links"><a href="https://github.com/ida-eng/Movie">Code on GitHub</a></div>
-    </article>
-  </div>
-</div></section>
-
-<section class="band" id="education"><div class="wrap">
-  <h2 class="line-h" style="--c:var(--red)">Education, training and languages</h2>
+<section class="band" id="education" style="padding-top:0"><div class="wrap sec">
+  <header><h2>Education</h2><p>Degrees, training and languages.</p></header>
   <div class="edu">
-    <div style="--c:var(--red)"><b>MSc, Telecommunication Engineering</b><span>Polytechnic University of Tirana · 2021–2023</span></div>
-    <div style="--c:var(--red)"><b>BSc, Telecommunication Engineering</b><span>Polytechnic University of Tirana · 2018–2021</span></div>
-    <div style="--c:var(--blue)"><b>Full Stack Developer training</b><span>Dominusoft · Jan–May 2024</span></div>
-    <div style="--c:var(--blue)"><b>Data Analysis and Visualization with Python</b><span>Microsoft certificate via Coursera</span></div>
-    <div style="--c:var(--green)"><b>Albanian</b><span>Native</span></div>
-    <div style="--c:var(--green)"><b>English C1/B2 · Italian B1/A2</b><span>Reading and speaking C1 in English</span></div>
+    <div class="ed"><b>MSc, Telecommunication Engineering</b><em>2021–2023</em><span>Polytechnic University of Tirana</span></div>
+    <div class="ed"><b>BSc, Telecommunication Engineering</b><em>2018–2021</em><span>Polytechnic University of Tirana</span></div>
+    <div class="ed"><b>Full Stack Developer</b><em>2024</em><span>Dominusoft · HTML, CSS, JavaScript, jQuery, Bootstrap, Python, Django, Git</span></div>
+    <div class="ed"><b>Data Analysis and Visualization with Python</b><em>Coursera</em><span>Microsoft certificate</span></div>
+    <div class="ed"><b>English</b><em>C1 / B2</em><span>C1 reading and spoken interaction; B2 listening, writing and spoken production</span></div>
+    <div class="ed"><b>Albanian · Italian</b><em>Native · B1</em><span>Italian B1 listening and reading, A2 writing and speaking</span></div>
   </div>
 </div></section>
 
 <section class="band contact" id="contact"><div class="wrap">
-  <h2>Let's build something</h2>
-  <div class="row">
-    <p>I'm looking for a software engineering role in Tirana, ideally part-time in the mornings. If your team works with Python, Django or APIs, I'd love to talk.</p>
-    <div class="cta">
-      <a class="btn solid" href="mailto:topalliaida1@gmail.com">Email me</a>
-      <a class="btn" href="https://www.linkedin.com/in/aida-topalli-432189292">LinkedIn</a>
-      <a class="btn" href="https://github.com/ida-eng">GitHub</a>
-    </div>
-  </div>
-  <div class="reach"><span>topalliaida1@gmail.com</span><span>+355 68 359 9174</span><span>Tirana, Albania</span>
+  <h2>Let's work together.</h2>
+  <div class="grid2">
+    <p>I'm looking for a software engineering role in Tirana, ideally part-time in the mornings. If your team builds with Python, Django or APIs, I'd love to hear from you.</p>
+    <ul class="clist">
+      <li><a href="mailto:topalliaida1@gmail.com">Email <em>topalliaida1@gmail.com</em></a></li>
+      <li><a href="https://www.linkedin.com/in/aida-topalli-432189292">LinkedIn <em>aida-topalli</em></a></li>
+      <li><a href="https://github.com/ida-eng">GitHub <em>ida-eng</em></a></li>
+      <li><span>Phone <em>+355 68 359 9174</em></span></li>
+    </ul>
   </div>
 </div></section>
-<footer><span>Aida Topalli · Tirana, Albania</span><span>Built with HTML and CSS</span></footer>
+
+<footer><div class="wrap"><span>© 2026 Aida Topalli</span><span>Tirana, Albania</span></div></footer>
 
 <script>
 {
-const stations=[
-  {n:"Polytechnic University",s:"BSc + MSc, 2018–2023",c:"var(--red)",d:"BSc and MSc in Telecommunication Engineering at the Polytechnic University of Tirana: networks, signals and systems thinking."},
-  {n:"Freelance web dev",s:"2021–2023",c:"var(--red)",d:"Full-stack web apps with Django and JavaScript: REST APIs, databases, responsive interfaces, Git/GitHub."},
-  {n:"Digicom",s:"Help desk, 2022–2023",c:"var(--blue)",d:"Technical support for telecom services, IPTV and networking: routers, switches, static IPs and network configuration."},
-  {n:"First Investment Bank",s:"Digital banking, 2023–2026",c:"var(--blue)",d:"Digitalization Unit: API testing, OAuth2/SCA flows, SEPA, fiscalized invoices, Oracle migration and Bank of Albania reporting."},
-  {n:"Domo and AAK",s:"Full stack + data, 2026",c:"var(--amber)",d:"Full Stack Engineer at Domo Analytics and part-time Data Engineer at AAK Tele-Science: Django, REST APIs, SQL and data integration."},
-  {n:"IMPAX",s:"Technical recruiter, 2026",c:"var(--amber)",d:"Sourcing and screening software and AI engineers for US startups in San Francisco and New York."},
-  {n:"Next stop",s:"Software engineer",c:"var(--green)",d:"A software engineering role in Albania, building with Python, Django and APIs.",next:true}
+const T0=2018.5,T1=2027,NOW=2026+10.7/12;
+const ym=(y,m)=>y+(m-1)/12;
+const pct=t=>((t-T0)/(T1-T0)*100).toFixed(2)+'%';
+const items=[
+  {n:"Technical Recruiter",o:"IMPAX",a:ym(2026,5),b:NOW,k:"cur"},
+  {n:"Data Engineer",o:"AAK Tele-Science",a:ym(2026,3),b:ym(2026,9),k:""},
+  {n:"Full Stack Engineer",o:"Domo Analytics",a:ym(2026,2),b:ym(2026,6),k:""},
+  {n:"Full Stack Developer",o:"Dominusoft training",a:ym(2024,1),b:ym(2024,6),k:"course"},
+  {n:"Digital Banking Specialist",o:"First Investment Bank",a:ym(2023,10),b:ym(2026,4),k:""},
+  {n:"Help Desk Support",o:"Digicom",a:ym(2022,5),b:ym(2023,11),k:""},
+  {n:"Web Developer",o:"Freelance",a:ym(2021,1),b:ym(2023,2),k:""},
+  {n:"MSc Telecommunication Eng.",o:"Polytechnic University of Tirana",a:ym(2021,11),b:ym(2023,11),k:"edu"},
+  {n:"BSc Telecommunication Eng.",o:"Polytechnic University of Tirana",a:ym(2018,10),b:ym(2021,10),k:"edu"}
 ];
-const svg=document.getElementById('mapsvg'),box=document.getElementById('map'),card=document.getElementById('card');
-let cur=stations.length-1;
-const show=i=>{cur=i;const t=stations[i];card.style.setProperty('--c',t.c);card.innerHTML=`<i class="dot"></i><b>${t.n} · ${t.s}</b><span>${t.d}</span>`;svg.querySelectorAll('.stn').forEach((g,k)=>g.querySelector('.o').setAttribute('r',k===i?17:12))};
-const draw=()=>{
-  const W=box.clientWidth,H=box.clientHeight,v=W<600,N=stations.length;
-  let pts=[];
-  if(!v){const m=W<760?50:80,top=H*.34,bot=H*.70,step=(W-2*m)/(N-1);
-    stations.forEach((_,i)=>{const x=m+i*step;const y=i<2?bot:(i<4?(top+bot)/2:top);pts.push([x,y])});
-  }else{const m=40,x1=W*.18,x2=W*.30,step=(H-2*m)/(N-1);
-    stations.forEach((_,i)=>pts.push([i<4?x1:x2,m+i*step]));}
-  // each leg its own path, 45° bends between levels
-  const leg=(i)=>{const[a,b]=pts[i-1],[x,y]=pts[i];let d=`M${a} ${b}`;
-    if(!v){const dy=y-b,half=(x-a)/2,j=Math.abs(dy);d+=dy?` L${a+half-j/2} ${b} L${a+half+j/2} ${y} L${x} ${y}`:` L${x} ${y}`}
-    else{const dx=x-a,half=(y-b)/2,j=Math.abs(dx);d+=dx?` L${a} ${b+half-j/2} L${x} ${b+half+j/2} L${x} ${y}`:` L${x} ${y}`}
-    return d};
-  let full='',out='',legs='';
-  for(let i=1;i<N;i++){const d=leg(i);full+=(i>1?d.replace(/^M[^L]+/,''):d);
-    const last=i===N-1;
-    legs+=`<path d="${d}" fill="none" stroke="${last?'var(--green)':stations[i-1].c}" stroke-width="14" stroke-linecap="${last?'butt':'round'}" stroke-linejoin="round" ${last?'stroke-dasharray="14 10"':''}/>`;}
-  out+=`<path d="${full}" fill="none" stroke="var(--line)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>`+legs;
-  stations.forEach((t,i)=>{const[x,y]=pts[i];const up=!v&&i%2===1;const sm=W<760&&!v;
-    const lx=v?x+34:x,ly=v?y+5:(up?y-(sm?30:46):y+42),anc=v?'start':'middle';
-    out+=`<g class="stn" tabindex="0" role="button" aria-label="${t.n}, ${t.s}" data-i="${i}">
-      <circle cx="${x}" cy="${y}" r="30" fill="transparent"/>
-      <circle class="o" cx="${x}" cy="${y}" r="12" fill="var(--bg)" stroke="${t.next?'var(--green)':'var(--ink)'}" stroke-width="7"/>
-      <text x="${lx}" y="${ly}" text-anchor="${anc}" font-size="${sm?14:16}" font-weight="800">${sm&&t.n.length>14?t.n.split(' ')[0]:t.n}</text>
-      ${sm?'':`<text x="${lx}" y="${ly+19}" text-anchor="${anc}" font-size="14" style="fill:var(--mute)">${t.s}</text>`}</g>`});
-  out+=`<circle class="train" r="6" fill="var(--bg)" stroke="var(--ink)" stroke-width="3"><animateMotion dur="10s" repeatCount="indefinite" path="${full}"/></circle>`;
-  svg.innerHTML=out;
-  svg.querySelectorAll('.stn').forEach(g=>{const i=+g.dataset.i;g.addEventListener('click',()=>show(i));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show(i)}})});
-  show(cur);
-};
-const ro=new ResizeObserver(draw);ro.observe(box);
-
-const skills=[
-  {h:"Languages and frameworks",c:"var(--red)",l:["Python","Django","JavaScript","HTML/CSS","SQL","PostgreSQL","Git/GitHub"]},
-  {h:"APIs and testing",c:"var(--blue)",l:["REST APIs","SOAP","Postman","JSON/XML","OAuth2 / SCA","Microservices"]},
-  {h:"Banking and data",c:"var(--amber)",l:["SEPA transfers","Regulatory reporting","Data validation","Oracle migration","Data analysis in Python"]},
-  {h:"Networks and people",c:"var(--green)",l:["Network configuration","Troubleshooting","Service monitoring","Stakeholder communication","Technical recruitment"]}
-];
-document.getElementById('skillgrid').innerHTML=skills.map(s=>`<div class="sk" style="--c:${s.c}"><h3>${s.h}</h3><ul class="chips">${s.l.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
+const rows=document.getElementById('rows');
+rows.insertAdjacentHTML('beforeend',items.map((r,i)=>`<div class="row"><div class="lab">${r.n}<small>${r.o}</small></div><div class="track"><div class="bar ${r.k}" style="left:${pct(r.a)};width:calc(${pct(r.b)} - ${pct(r.a)});animation-delay:${i*60}ms" title="${r.n}, ${r.o}"></div></div></div>`).join(''));
+const yrs=[2019,2020,2021,2022,2023,2024,2025,2026];
+document.getElementById('ticks').innerHTML=yrs.map(y=>`<span style="left:${pct(y)}">${y}</span>`).join('');
+document.getElementById('grid').innerHTML=yrs.map(y=>`<i style="left:${pct(y)}"></i>`).join('')+`<i class="now" style="left:${pct(NOW)}"></i>`;
 
 const jobs=[
-  {t:"Technical Recruiter, US market",o:"IMPAX · Tirana · May 2026–present",p:["Source and screen software and AI engineers for US startups in San Francisco and New York","Assess technical backgrounds, goals, availability and work authorization","Coordinate submissions, interviews and feedback; report weekly submission and interview metrics","LinkedIn, SourceWhale, Paraform, Calendly"]},
-  {t:"Data Engineer (part-time)",o:"AAK Tele-Science, Inc. · Remote · Mar–Aug 2026",p:["Worked with SQL databases and structured data","Supported data integration and backend processes; explored data pipelines and system architecture"]},
-  {t:"Full Stack Engineer",o:"Domo Analytics · Tirana · Feb–May 2026",p:["Developed web applications with JavaScript, HTML, CSS and Python (Django)","Worked on REST APIs, backend logic and database integrations, managing data flow between front end and back end","Git/GitHub for version control and collaboration"]},
-  {t:"Digital Banking Specialist",o:"First Investment Bank · Digitalization Unit · Oct 2023–Mar 2026",p:["Reports on transfers and digital banking customers for internal use and the Bank of Albania","API testing and integration validation with Postman, REST APIs, JSON/XML and microservices","Tested OAuth2 and SCA authentication flows and secure transactions; supported deployment and monitoring","Data validation during the Oracle system migration","SEPA transfers, payment workflows and fiscalized invoice integration in mobile banking","Business client onboarding, including digital banking setup and token activation"]},
-  {t:"Help Desk Support Specialist",o:"Digicom SHPK · Tirana · May 2022–Oct 2023",p:["Technical support for telecom services, IPTV and networking equipment","Diagnosed routers, switches, static IPs and network configuration issues","Monitored performance and implemented fixes to reduce downtime"]},
-  {t:"Web Developer",o:"Freelance · Albania · Jan 2021–Jan 2023",p:["Full-stack web apps with JavaScript, HTML, CSS and Python (Django)","Built and integrated REST APIs, managed databases and improved performance","Responsive interfaces, Git/GitHub"]}
+  {w:"May 2026 – now",l:"Tirana",t:"Technical Recruiter, US market",o:"IMPAX",p:["Source and screen software and AI engineers for US startups in San Francisco and New York","Assess technical backgrounds, career goals, availability and work authorization","Coordinate submissions, interviews and feedback; report weekly submission and interview metrics"]},
+  {w:"Mar – Aug 2026",l:"Remote, part-time",t:"Data Engineer",o:"AAK Tele-Science, Inc.",p:["Worked with SQL databases and structured data","Supported data integration and backend processes; explored data pipelines and system architecture"]},
+  {w:"Feb – May 2026",l:"Tirana",t:"Full Stack Engineer",o:"Domo Analytics",p:["Developed web applications with JavaScript, HTML, CSS and Python (Django)","Built REST APIs, backend logic and database integrations between front end and back end","Git and GitHub for version control and collaboration"]},
+  {w:"Oct 2023 – Mar 2026",l:"Tirana",t:"Digital Banking Specialist",o:"First Investment Bank · Digitalization Unit",p:["API testing and integration validation with Postman, REST, JSON/XML and microservices","Tested OAuth2 and SCA authentication flows and secure transactions; supported deployment, testing and monitoring","SEPA transfers, payment workflows and fiscalized invoice integration in mobile banking","Data validation during the Oracle system migration","Reports on transfers and digital banking customers for internal use and the Bank of Albania"]},
+  {w:"May 2022 – Oct 2023",l:"Tirana",t:"Help Desk Support Specialist",o:"Digicom SHPK",p:["Technical support for telecom services, IPTV and networking equipment","Diagnosed routers, switches, static IPs and network configuration issues","Monitored system performance and implemented fixes to reduce downtime"]},
+  {w:"Jan 2021 – Jan 2023",l:"Albania",t:"Web Developer",o:"Freelance",p:["Full-stack web applications with JavaScript, HTML, CSS and Python (Django)","Built and integrated REST APIs, managed databases and improved performance","Responsive interfaces, Git and GitHub"]}
 ];
-document.getElementById('jobs').innerHTML=jobs.map(j=>`<li class="job"><div><h3>${j.t}</h3><div class="org">${j.o}</div></div><ul>${j.p.map(x=>`<li>${x}</li>`).join('')}</ul></li>`).join('');
+document.getElementById('jobs').innerHTML=jobs.map(j=>`<li class="job"><div class="when">${j.w}<small>${j.l}</small></div><div><h3>${j.t}</h3><div class="org">${j.o}</div></div><ul>${j.p.map(x=>`<li>${x}</li>`).join('')}</ul></li>`).join('');
+
+const skills=[
+  ["Languages","Python, JavaScript, SQL, HTML/CSS"],
+  ["Frameworks","Django, Bootstrap, jQuery"],
+  ["APIs","REST, SOAP, JSON/XML, microservices"],
+  ["Testing","Postman, integration validation, OAuth2 / SCA flows"],
+  ["Data","PostgreSQL, SQL reporting, data validation, Python data analysis"],
+  ["Tools","Git, GitHub"],
+  ["Banking","SEPA, payment workflows, e-invoicing, regulatory reporting"],
+  ["Networks","Routers, switches, static IPs, network configuration, monitoring"]
+];
+document.getElementById('skills-list').innerHTML=skills.map(s=>`<div class="sk"><b>${s[0]}</b><span>${s[1]}</span></div>`).join('');
 }
 </script>
 </body>

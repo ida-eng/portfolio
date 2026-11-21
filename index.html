@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aida Topalli</title>
-<meta name="description" content="Aida Topalli, software engineer in Tirana. Python, Django, REST APIs and data.">
+<meta name="description" content="Aida Topalli, software engineer. Full-stack web applications and REST APIs with Python, Django and JavaScript.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -218,10 +218,10 @@ nav ul a.active{background:var(--lav)}
 <main class="wrap" id="top">
   <div class="bento">
     <div class="hero" id="hero"><span class="glow" aria-hidden="true"></span>
-      <ul class="chips"><li class="on">Software engineer</li><li>Python · Django</li><li>Backend &amp; APIs</li><li>Tirana</li></ul>
+      <ul class="chips"><li class="on">Software engineer</li><li>Python · Django</li><li>Backend &amp; APIs</li><li>Remote · Europe (CET)</li></ul>
       <h1>Hi, I'm <em>Aida</em> Topalli.</h1>
       <p class="typed" aria-live="off">I build <b id="typed">Django backends</b><i class="caret" aria-hidden="true"></i></p>
-      <p>Software engineer with a telecommunication engineering background. I build full-stack web applications with Python, Django and JavaScript, design REST APIs and work with databases and data pipelines. I care about clean backends, reliable integrations and software that works for the people using it.</p>
+      <p>I build full-stack web applications and the APIs behind them, with Python, Django and JavaScript. My background is telecommunication engineering and production financial systems, where I worked on API integrations, authentication and data migrations. I care about clean backends, reliable integrations and products people genuinely enjoy using.</p>
       <div class="btns">
         <a class="btn dark" href="#contact">Get in touch</a>
         <a class="btn" href="AidaTOPALLI.pdf">Download CV</a>
@@ -229,7 +229,7 @@ nav ul a.active{background:var(--lav)}
     </div>
     <div class="stats">
       <div class="st peach"><b>2021</b><span>Building software with Python and Django</span></div>
-      <div class="st mint"><b data-count="5">5</b><span>Live projects you can click through</span></div>
+      <div class="st mint"><b data-count="0" id="projCount">0</b><span>Live projects you can click through</span></div>
       <div class="st sky"><b>MSc</b><span>Master’s in telecom engineering</span></div>
       <div class="st butter"><b>C1</b><span>English, plus Albanian and Italian</span></div>
     </div>
@@ -276,11 +276,11 @@ nav ul a.active{background:var(--lav)}
   <section id="projects">
     <div class="head"><h2>Projects</h2><p>Client work, code and live demos.</p></div>
     <div class="pfilter" role="group" aria-label="Filter projects">
-      <button type="button" class="on" data-f="all" aria-pressed="true">All <em>5</em></button>
-      <button type="button" data-f="python" aria-pressed="false">Python &amp; Django <em>1</em></button>
-      <button type="button" data-f="javascript" aria-pressed="false">JavaScript <em>3</em></button>
-      <button type="button" data-f="react" aria-pressed="false">React <em>1</em></button>
-      <button type="button" data-f="client" aria-pressed="false">Client work <em>1</em></button>
+      <button type="button" class="on" data-f="all" aria-pressed="true">All <em></em></button>
+      <button type="button" data-f="python" aria-pressed="false">Python &amp; Django <em></em></button>
+      <button type="button" data-f="javascript" aria-pressed="false">JavaScript <em></em></button>
+      <button type="button" data-f="react" aria-pressed="false">React <em></em></button>
+      <button type="button" data-f="client" aria-pressed="false">Client work <em></em></button>
     </div>
     <div class="proj">
       <article class="p feat" data-tags="python">
@@ -335,8 +335,8 @@ nav ul a.active{background:var(--lav)}
 
   <div class="contact" id="contact">
     <div>
-      <h2>Let's work <em>together.</em></h2>
-      <p>I'm looking for a software engineering role in Tirana, ideally part-time in the mornings. If your team builds with Python, Django or APIs, I'd love to hear from you.</p>
+      <h2>Let's build something <em>great.</em></h2>
+      <p>I'm open to software engineering roles and collaborations worldwide, on-site, hybrid or remote. If you're building with Python, Django or APIs, I'd love to hear about it.</p>
     </div>
     <ul class="clist">
       <li class="mailrow"><a href="mailto:topalliaida1@gmail.com">Email <em>topalliaida1@gmail.com</em></a><button type="button" class="copy" id="copyMail" aria-label="Copy email address">Copy</button></li>
@@ -349,7 +349,7 @@ nav ul a.active{background:var(--lav)}
 
 <button class="totop" id="toTop" type="button" aria-label="Back to top">↑</button>
 <div class="toast" id="toast" role="status" hidden></div>
-<footer><div class="wrap"><span>© 2026 Aida Topalli</span><span>Tirana, Albania</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Aida Topalli</span><span>Based in Tirana · working across time zones</span></div></footer>
 
 <script>
 {
@@ -374,7 +374,7 @@ document.getElementById('grid').innerHTML=yrs.map(y=>`<i style="left:${pct(y)}">
 
 const jobs=[
   {w:"May 2026 – now",c:"peach",l:"Tirana",t:"Technical Recruiter, US market",o:"IMPAX",p:["Source and screen software and AI engineers for US startups in San Francisco and New York","Assess technical backgrounds, career goals, availability and work authorization","Coordinate submissions, interviews and feedback; report weekly submission and interview metrics"]},
-  {w:"Mar – Aug 2026",c:"mint",l:"Remote, part-time",t:"Data Engineer",o:"AAK Tele-Science, Inc.",p:["Worked with SQL databases and structured data","Supported data integration and backend processes; explored data pipelines and system architecture"]},
+  {w:"Mar – Aug 2026",c:"mint",l:"Remote",t:"Data Engineer",o:"AAK Tele-Science, Inc.",p:["Worked with SQL databases and structured data","Supported data integration and backend processes; explored data pipelines and system architecture"]},
   {w:"Feb – May 2026",c:"lav",l:"Tirana",t:"Full Stack Engineer",o:"Domo Analytics",p:["Developed web applications with JavaScript, HTML, CSS and Python (Django)","Built REST APIs, backend logic and database integrations between front end and back end","Git and GitHub for version control and collaboration"]},
   {w:"Oct 2023 – Mar 2026",c:"lav",l:"Tirana",t:"Digital Banking Specialist",o:"First Investment Bank",p:["Worked on system integrations across REST and SOAP APIs, microservices, OAuth2 and SCA authentication","Contributed to the Oracle system migration through data validation and system transition support"]},
   {w:"May 2022 – Oct 2023",c:"lav",l:"Tirana",t:"Help Desk Support Specialist",o:"Digicom SHPK",p:["Technical support for telecom services, IPTV and networking equipment","Diagnosed routers, switches, static IPs and network configuration issues","Monitored system performance and implemented fixes to reduce downtime"]},
@@ -487,6 +487,19 @@ if(!reduce&&'IntersectionObserver' in window){
 
 // timeline bar tooltips
 document.querySelectorAll('#rows .b').forEach(b=>{const lab=b.closest('.row').querySelector('.lab');b.dataset.tip=b.title;b.removeAttribute('title')});
+
+// project counts are computed from the cards, so new projects update everything automatically
+{
+  const all=[...document.querySelectorAll('.proj .p')];
+  document.querySelectorAll('.pfilter button').forEach(b=>{
+    const f=b.dataset.f;
+    const n=f==='all'?all.length:all.filter(c=>(c.dataset.tags||'').split(' ').includes(f)).length;
+    b.querySelector('em').textContent=n;
+    b.hidden=n===0;
+  });
+  const live=all.filter(c=>c.querySelector('.links a')).length;
+  const pc=$('projCount');pc.dataset.count=live;pc.textContent=live;
+}
 
 // count-up for stat numbers when they come into view
 if(!reduce){

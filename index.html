@@ -52,7 +52,7 @@ a:focus-visible{outline:3px solid var(--lav2);outline-offset:3px}
 .stats{grid-column:span 4;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .st{border-radius:var(--r);padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:150px}
 .st b{white-space:nowrap;font-family:var(--serif);font-weight:400;font-size:clamp(40px,4vw,54px);line-height:.95;letter-spacing:-.01em}
-.st span{font-size:14.5px;line-height:1.35;font-weight:600;color:#3b3550}
+.st span{font-size:14.5px;line-height:1.35;font-weight:600;color:#3b3550;overflow-wrap:break-word}
 .tl{grid-column:1/-1}
 .tl .head{margin-bottom:16px}
 .tl h3{font-size:21px}
@@ -230,7 +230,7 @@ nav ul a.active{background:var(--lav)}
     <div class="stats">
       <div class="st peach"><b>2021</b><span>Building software with Python and Django</span></div>
       <div class="st mint"><b data-count="5">5</b><span>Live projects you can click through</span></div>
-      <div class="st sky"><b>MSc</b><span>Telecommunication Engineering</span></div>
+      <div class="st sky"><b>MSc</b><span>Master’s in telecom engineering</span></div>
       <div class="st butter"><b>C1</b><span>English, plus Albanian and Italian</span></div>
     </div>
 
